@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>My Calendar</title>
+
+    <link rel="stylesheet" type="text/css" href="AdRotator.css">
+    <script src="jquery-1.12.0.min.js"></script>
+    <script src="AdRotator.js"></script>
+  </head>
+
+  <body>
+    <header>
+      <h1>Calendar Input</h1>
+    </header>
+
+    <div class="ad">
+      <span class="ad-button" id="left"><img src="prev_blue.png" alt="Left Button" id="left_button"></span>
+      <span class="ad-picture" id="ad"><a href="http://sua.umn.edu/events/calendar/event/14601/" target="_blank"><img src="oscar.jpg" alt="A Night at the Oscars" id="oscar" title="A Night at the Oscars\nSat, Feb 27 5-11PM"></a></span>
+      <span class="ad-button" id="right"><img src="next_blue.png" alt="Right Button" id="right_button"></span>
+    </div>
+    <div class="ad">
+      <span class="ad-bullet" id="first"><img src="bullet_gray.png" alt="First Bullet" id="first_bullet"></span>
+      <span class="ad-bullet" id="second"><img src="bullet_gray.png" alt="Second Bullet" id="second_bullet"></span>
+      <span class="ad-bullet" id="third"><img src="bullet_gray.png" alt="Third Bullet" id="third_bullet"></span>
+    </div>
+
+    <nav>
+      <span class="widespaced">
+        <a href="calendar.html">Calendar</a>
+      </span>
+      <span class="widespaced">
+        <a href="inputform.html">Input Form</a>
+      </span>
+    </nav>
+
+    <div class="table-spacing">
+      <form method="post" action="calendar.html">
+        <input type="hidden" name="recipient" value="example@gmail.com">
+        <input type="hidden" name="subject" value="Calendar Addition">
+        <input type="hidden" name="redirect" value="calendar.html">
+
+        <div class="form-group">
+          <label>Event Name:</label>
+          <input name="eventname" type="text" size="25" required>
+        </div>
+        <div class="form-group">
+          <label>Start Time:</label>
+          <input name="starttime" type="time" size="25" required>
+        </div>
+        <div class="form-group">
+          <label>End Time:</label>
+          <input name="endtime" type="time" size="25" required>
+        </div>
+        <div class="form-group">
+          <label>Location:</label>
+          <input name="location" type="text" size="25" required>
+        </div>
+
+        <div class="form-group">
+          <input type="submit" value="Submit">
+        </div>
+      </form>
+    </div>
+  </body>
+</html>

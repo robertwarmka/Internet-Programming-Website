@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="initial-scale=1.0 user-scalable=no">
+    <meta charset="utf-8">
+    <title>My Calendar</title>
+
+    <link rel="stylesheet" type="text/css" href="AdRotator.css">
+    <script src="jquery-1.12.0.min.js"></script>
+    <script src="AdRotator.js"></script>
+  </head>
+
+  <body>
+    <header>
+      <h1>My Class Schedule Calendar</h1>
+    </header>
+
+    <nav>
+      <span class="widespaced">
+        <a href="calendar.html">Calendar</a>
+      </span>
+      <span class="widespaced">
+        <a href="inputform.html">Input Form</a>
+      </span>
+    </nav>
+
+    <!--
+      Credit for pictures of Keller, Anderson, Fraser, Ferguson, and Bruininks hall goes to campusmaps.umn.edu
+      Keller: https://campusmaps.umn.edu/sites/campusmaps.umn.edu/files/styles/building_photos/public/kellerhall_150626_4282.jpg?itok=eVPCd5rQ
+      Anderson: http://campusmaps.umn.edu/sites/campusmaps.umn.edu/files/styles/building_photos/public/anderson_hall_050722_7991.jpg?itok=BqCHiFMY
+      Fraser: http://campusmaps.umn.edu/sites/campusmaps.umn.edu/files/styles/building_photos/public/fraser_070501_0531_580x380.jpg?itok=pSvkh1qB
+      Ferguson: http://campusmaps.umn.edu/sites/campusmaps.umn.edu/files/styles/building_photos/public/ferguson_090723_6019.jpg?itok=t_9M043-
+      Bruininks: https://campusmaps.umn.edu/sites/campusmaps.umn.edu/files/styles/building_photos/public/bruininks_100802_9044_v3.jpg?itok=paKWRIMC
+    -->
+
+    <table id="calendar-table">
+      <tbody>
+        <tr>
+          <td><span class="day">Monday</span></td>
+          <td>
+            <p><span class="italic">11:15am-12:30pm</span></p>
+            <p>CSCI 4131</p>
+            <p id = "anderson1" class="picture">Anderson Hall 350</p>
+            <!--<form><input id = "anderson1" type="button" value="Picture"></form>-->
+          </td>
+          <td>
+            <p><span class="italic">7:15pm-8:15pm</span></p>
+            <p>MUS 3430</p>
+            <p id = "ferguson1" class="picture">Ferguson Hall 85</p>
+            <!--<form><input id = "ferguson1" type="button" value="Picture"></form>-->
+          </td>
+        </tr>
+        <tr>
+          <td><span class="day">Tuesday</span></td>
+          <td>
+            <p><span class="italic">11:15am-12:30pm</span></p>
+            <p><a href="http://www-users.cselabs.umn.edu/classes/Spring-2016/csci4011/"
+              target="_blank">CSCI 4011</a></p>
+            <p id = "fraser1" class="picture">Fraser Hall 101</p>
+            <!--<form><input id = "fraser1" type="button" value="Picture"></form>-->
+          </td>
+          <td>
+            <p><span class="italic">2:30pm-3:45pm</span></p>
+            <p>CSCI 4707</p>
+            <p id = "keller1" class="picture">Keller Hall 3-210</p>
+            <!--<form><input id = "keller1" type="button" value="Picture"></form>-->
+          </td>
+        </tr>
+        <tr>
+          <td><span class="day">Wednesday</span></td>
+          <td>
+            <p><span class="italic">11:15am-12:30pm</span></p>
+            <p>CSCI 4131</p>
+            <p id = "anderson2" class="picture">Anderson Hall 350</p>
+            <!--<form><input id = "anderson2" type="button" value="Picture"></form>-->
+          </td>
+          <td>
+            <p><span class="italic">7:15pm-8:15pm</span></p>
+            <p>MUS 3430</p>
+            <p id = "ferguson2" class="picture">Ferguson Hall 85</p>
+            <!--<form><input id = "ferguson2" type="button" value="Picture"></form>-->
+          </td>
+        </tr>
+        <tr>
+          <td><span class="day">Thursday</span></td>
+          <td>
+            <p><span class="italic">11:15am-12:30pm</span></p>
+            <p><a href="http://www-users.cselabs.umn.edu/classes/Spring-2016/csci4011/"
+              target="_blank">CSCI 4011</a></p>
+            <p id = "fraser2" class="picture">Fraser Hall 101</p>
+            <!--<form><input id = "fraser2" type="button" value="Picture"></form>-->
+          </td>
+          <td>
+            <p><span class="italic">2:30pm-3:45pm</span></p>
+            <p>CSCI 4707</p>
+            <p id = "keller2" class="picture">Keller Hall 3-210</p>
+            <!--<form><input id = "keller2" type="button" value="Picture"></form>-->
+          </td>
+        </tr>
+        <tr>
+          <td><span class="day">Friday</span></td>
+          <td>
+            <p><span class="italic">11:15am-12:05pm</span></p>
+            <p>CSCI 4011</p>
+            <p id = "bruininks1" class="picture">Bruininks Hall 432A</p>
+            <!--<span id = ""><img id = "test1"></span>-->
+          </td>
+        </tr>
+      </tbody>
+    </table>
+
+    <form>
+      <input id="address" type="text">
+      <input id="submit" type="button" value="submit">
+    </form>
+
+    <form id="map-form">
+      <input type="radio" name="category" value="art_gallery" checked> Art Gallery<br>
+      <input type="radio" name="category" value="restaurant"> Restaurant<br>
+      <input type="radio" name="category" value="doctor"> Doctor<br>
+      <input type="radio" name="category" value="clothing_store"> Clothing Store<br>
+      <input type="radio" name="category" value="shopping_mall"> Shopping Mall<br>
+      <input type="radio" name="category" value="travel_agency"> Travel<br>
+      <input type="radio" name="category" value="university"> University<br>
+      Radius (M)<br>
+      <input id="radius-slider" type="range" name="radius" min="0" max="3000" step="100" value="500"><br>
+      <input id="display-radius" type="text" value = "500" size="14" readonly><br>
+      <input id="places-lat" type="hidden" name="latitude" value="null">
+      <input id="places-lon" type="hidden" name="longitude" value="null">
+      <input type="hidden" name="key" value="AIzaSyB5a3KMJwiDFv7xEaJKx2QBWVMxOpzjlGY">
+      <input id="places-submit" name="submitButton" type="submit" value="submit">
+    </form>
+
+    <div id="map"></div>
+
+    <!-- The following scripts are based on JavaScript code found at the following
+         websites: https://developers.google.com/maps/documentation/javascript/examples/geocoding-simple
+         and: https://developers.google.com/maps/documentation/javascript/tutorial
+         Thanks to Google for the code base to set up their maps within a webpage
+    -->
+    <script>
+    var map, queryMarker = null, directionsService, directionsDisplay, prevWindow = null, prevMarkers = [];
+    function initMap() {
+      var mapData = getCoordsJSON();
+      //var mapinit = mapData.mapinit;
+      var myLatLng = {lat: 44.973559, lng: -93.234671};
+      //var myLatLng = {lat: parseFloat(mapinit.center.lat), lng: parseFloat(mapinit.center.long)};
+      map = new google.maps.Map(document.getElementById('map'), {
+        center: myLatLng,
+        zoom: 15//parseInt(mapinit.zoom)
+      });
+
+      directionsService = new google.maps.DirectionsService;
+      directionsDisplay = new google.maps.DirectionsRenderer;
+      directionsDisplay.setMap(map);
+
+      google.maps.event.addListener(map, 'click', function(event) {
+        if(queryMarker != null) {
+          queryMarker.setMap(null);
+        }
+        $("#places-lat").val(event.latLng.lat());
+        $("#places-lon").val(event.latLng.lng());
+        queryMarker = new google.maps.Marker({
+  			  position: event.latLng,
+  			  map: map,
+  			  title: 'Query Marker'
+  			});
+      });
+    }
+
+    function addMarkerListener(marker, infowindow) {
+      marker.addListener('click', function() {
+        infowindow.open(map,marker);
+      });
+    }
+    </script>
+
+    <script async defer
+          src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBYX7oCl9OzgB5VgQdesYkJPNsquPYqr8k&callback=initMap">
+        </script>
+
+    <div class="div-footer">*This page has been tested in Google Chrome</div>
+    <div class="div-footer">Pictures have been taken from the following links:</div>
+    <div class="div-footer">https://campusmaps.umn.edu/</div>
+  </body>
+</html>

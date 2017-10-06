@@ -1,0 +1,131 @@
+html { background-color: #303030; }
+a { color: red; }
+p { color: gold; }
+input { display: table-cell; }
+
+label {
+  display: table-cell;
+  color: gold;
+}
+
+header {
+  color: #E5E5E5;
+  text-align: center;
+}
+
+table {
+  margin: 1em auto 1em auto;
+  text-align: center;
+}
+
+td {
+  border: thick solid transparent;
+  border-radius: 10px;
+  padding: 0.33em;
+  background-color: #454545;
+}
+
+nav {
+  background-color: gold;
+  border-spacing: 1em;
+  text-align: center;
+}
+
+form {
+  display: table;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+
+div {}
+  .form-group {
+    display: table-row;
+  }
+  .table-spacing {
+    margin: 1em;
+  }
+  .div-footer {
+    color: white;
+    text-align: center;
+    font-style: italic;
+  }
+  .ad {
+    text-align: center;
+    width: 100%;
+  }
+
+span {}
+  .widespaced {
+    margin: 1em;
+  }
+  .day {
+    color: #E5E5E5;
+    font-size: 1.25em;
+  }
+  .italic { font-style:italic; }
+  .helper {
+    display: inline-block;
+    height: 100%;
+    vertical-align: middle;
+  }
+  .ad-button {
+    display: inline-block;
+    height: 100%;
+    margin-left: 25px;
+    margin-right: 25px;
+    vertical-align: top;
+  }
+  .ad-picture {
+    display: inline-block;
+    height: 100%;
+    margin-top: 10px;
+  }
+  .ad-bullet {
+    display: inline-block;
+    height: 100%;
+    vertical-align: middle;
+    margin: 5px;
+  }
+
+/* This section of the CSS file comes from Daniel Challou's CSS file for his
+   Google Maps webpage. Credit goes to him for the CSS code. */
+html, body { height: 100%; margin: 0; padding: 0; }
+
+#map-form {
+  background-color: white;
+  position: absolute;
+  margin-top: 4.5%;
+  margin-left: 10.5%;
+  margin-right: auto;
+  text-align: left;
+  padding: 5px;
+  z-index: 1;
+}
+
+#map-form > input {
+  margin: 4px 0px 4px 0px;
+}
+
+
+#map {
+  height: 50%;
+  margin-left: 10%;
+  margin-right: 10%;
+  margin-top: 2%;
+  margin-bottom: 1%;
+}
+
+#picture {
+  z-index: 1;
+  position: absolute;
+  background-color: black;
+  display: block;
+}
+
+#picture > img {
+  position: relative;
+  vertical-align: middle;
+  margin-left: auto;
+  margin-right: auto;
+}
